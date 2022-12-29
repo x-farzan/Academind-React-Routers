@@ -4,25 +4,26 @@ import AllMeetupsPage from "./pages/AllMeetups";
 import FavouritesPage from "./pages/Favourites";
 import NewMeetupsPage from "./pages/NewMeetups";
 
-import MainNavigation from "./components/layouts/MainNavigation";
+import Layout from "./components/layouts/Layout";
 
 function App() {
   return (
     <div>
-      <MainNavigation />
-      <Switch>
-        <Route exact path="/">
-          <AllMeetupsPage />
-        </Route>
+      <Layout>
+        <Switch>
+          <Route exact path="/">
+            <AllMeetupsPage />
+          </Route>
 
-        <Route path="/new-meetup">
-          <NewMeetupsPage />
-        </Route>
+          <Route path="/new-meetup">
+            <NewMeetupsPage />
+          </Route>
 
-        <Route path="/favourites">
-          <FavouritesPage />
-        </Route>
-      </Switch>
+          <Route path="/favourites">
+            <FavouritesPage />
+          </Route>
+        </Switch>
+      </Layout>
     </div>
   );
 }
